@@ -1,0 +1,78 @@
+@model IEnumerable<LMSystem.Models.BorrowRecord>
+
+@{
+    ViewData["Title"] = "Borrow Records";
+}
+
+<div class="row mt-3">
+    <!-- Banner -->
+    <div class="col-12 mb-3">
+        <div class="position-relative rounded-3 overflow-hidden shadow-sm">
+            <img src="~/images/borrow-banner.jpg" class="img-fluid w-100" alt="Borrow"
+                 style="max-height: 200px; object-fit: cover;" />
+            <div class="position-absolute top-0 start-0 w-100 h-100"
+                 style="background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.1));">
+                <div class="h-100 d-flex flex-column justify-content-center ps-4">
+                    <h2 class="text-white fw-bold mb-1">Borrow & Returns</h2>
+                    <p class="text-light mb-0">Track who borrowed which book and when it was returned.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card + table -->
+    <div class="col-12">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-primary text-white">
+                <span class="fw-semibold">Borrowing History</span>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0 align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Book</th>
+                                <th>Borrowed By</th>
+                                <th>Borrow Date</th>
+                                <th>Return Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.Any())
+                            {
+                                @foreach (var record in Model)
+                                {
+                                    <tr>
+                                        <td>@record.Book?.Title</td>
+                                        <td>@record.BorrowerName</td>
+                                        <td>@record.BorrowDate.ToString("yyyy-MM-dd")</td>
+                                        <td>@(record.ReturnDate?.ToString("yyyy-MM-dd") ?? "-")</td>
+                                        <td>
+                                            @if (record.ReturnDate == null)
+                                            {
+                                                <span class="badge bg-warning text-dark">Active</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-success">Returned</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="5" class="text-center text-muted py-4">
+                                        No borrow records found.
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

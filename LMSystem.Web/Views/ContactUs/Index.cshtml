@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="row mt-4">
+    <div class="col-md-6 mb-3">
+        <h2 class="fw-bold mb-3">Get in Touch</h2>
+        <p class="text-muted mb-4">
+            Have questions or suggestions about the system? Use the form below to reach out.
+        </p>
+
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Your Name</label>
+                <input class="form-control" placeholder="Enter your name" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input class="form-control" type="email" placeholder="Enter your email" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="4" placeholder="Type your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm">
+            <img src="~/images/contact.jpg" class="card-img-top" alt="Contact"
+                 style="height: 220px; object-fit: cover;" />
+            <div class="card-body">
+                <h5 class="fw-semibold mb-2">Library Address</h5>
+                <p class="text-muted mb-0">
+                    123 Knowledge Street<br />
+                    City Center, Learning District<br />
+                    Email: library@example.com
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

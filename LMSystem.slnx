@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="LMSystem.Tests/LMSystem.Tests.csproj" />
+  <Project Path="LMSystem.Web/LMSystem.Web.csproj" />
+</Solution>

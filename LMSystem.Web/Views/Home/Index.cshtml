@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="row mt-3">
+    <!-- Hero image + overlay -->
+    <div class="col-12 mb-4">
+        <div class="position-relative rounded-3 overflow-hidden shadow-sm">
+            <img src="~/images/library-hero.jpg" class="img-fluid w-100" alt="Library"
+                 style="max-height: 280px; object-fit: cover;" />
+            <div class="position-absolute top-0 start-0 w-100 h-100"
+                 style="background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.1));">
+                <div class="h-100 d-flex flex-column justify-content-center ps-4">
+                    <h1 class="text-white fw-bold mb-2">Your Digital Library Hub</h1>
+                    <p class="text-light mb-3">
+                        Discover books, manage borrowing, and explore publications with a modern interface.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-primary" asp-controller="Books" asp-action="Index">Browse Books</a>
+                        <a class="btn btn-outline-light" asp-controller="Dashboard" asp-action="Index">Admin
+                            Dashboard</a>
+                            <a class="btn btn-outline-light" asp-controller="Login" asp-action="Index">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="col-12">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="~/images/books.jpg" class="card-img-top" alt="Books"
+                             style="height: 150px; object-fit: cover;" />
+                        <div class="card-body">
+                            <h5 class="fw-semibold">Books</h5>
+                            <p class="text-muted mb-3">Search, filter, and manage book details with pagination.</p>
+                            <a class="btn btn-sm btn-primary" asp-controller="Books" asp-action="Index">Open Books</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="~/images/borrow.jpg" class="card-img-top" alt="Borrow"
+                             style="height: 150px; object-fit: cover;" />
+                        <div class="card-body">
+                            <h5 class="fw-semibold">Borrow</h5>
+                            <p class="text-muted mb-3">Track who borrowed which book and manage returns.</p>
+                            <a class="btn btn-sm btn-primary" asp-controller="Borrow" asp-action="Index">Borrow Records</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="~/images/publications.jpg" class="card-img-top" alt="Publications"
+                             style="height: 150px; object-fit: cover;" />
+                        <div class="card-body">
+                            <h5 class="fw-semibold">Publications</h5>
+                            <p class="text-muted mb-3">Explore magazines and newspapers with beautiful listings.</p>
+                            <a class="btn btn-sm btn-primary" asp-controller="Publications" asp-action="Index"
+                               asp-route-type="Magazine">View Publications</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="~/images/dashboard.jpg" class="card-img-top" alt="Dashboard"
+                             style="height: 150px; object-fit: cover;" />
+                        <div class="card-body">
+                            <h5 class="fw-semibold">Dashboard</h5>
+                            <p class="text-muted mb-3">See key stats for students, books, librarians, and borrowing.</p>
+                            <a class="btn btn-sm btn-primary" asp-controller="Dashboard" asp-action="Index">Go to
+                                Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,18 @@
+@model LMSystem.Models.Book
+
+@{
+    ViewData["Title"] = "Book Details";
+}
+
+<h2>@Model.Title</h2>
+
+<p><strong>Author:</strong> @Model.Author</p>
+<p><strong>ISBN:</strong> @Model.ISBN</p>
+<p><strong>Published Date:</strong> @Model.PublishedDate.ToString("yyyy-MM-dd")</p>
+<p>
+    <strong>Availability:</strong>
+    @(Model.IsAvailable ? "Available" : "Borrowed")
+</p>
+
+<a asp-action="Edit" asp-route-id="@Model.BookId" class="btn btn-warning">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

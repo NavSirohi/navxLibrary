@@ -1,0 +1,49 @@
+@model LMSystem.Models.Publication
+
+@{
+    string currentType = ViewData["CurrentType"]?.ToString() ?? "Newspaper";
+    ViewData["Title"] = "Add New " + currentType;
+}
+
+<div class="container mt-4" style="max-width: 600px;">
+    <div class="card shadow-sm">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">Add New @currentType</h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <input type="hidden" asp-for="Type" value="@currentType" />
+
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Publisher" class="form-label"></label>
+                    <input asp-for="Publisher" class="form-control" />
+                    <span asp-validation-for="Publisher" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PublishedDate" class="form-label"></label>
+                    <input asp-for="PublishedDate" type="date" class="form-control" />
+                    <span asp-validation-for="PublishedDate" class="text-danger small"></span>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary px-4">Save Entry</button>
+                    <a asp-action="Index" asp-route-type="@currentType" class="btn btn-outline-secondary">Back to
+                        List</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
