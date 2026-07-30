@@ -10,14 +10,12 @@ It is built using **ASP.NET Core MVC**, **C#**, and **Bootstrap**, and provides 
 
 ## 📸 Screenshots
 
-```markdown
 ![alt text](<screenshots/Screenshot 2026-07-30 at 10.25.55 PM.png>)
 ![alt text](<screenshots/Screenshot 2026-07-30 at 10.09.16 PM.png>)
 ![alt text](<LMSystem.Web/Views/Dashboard/Screenshot 2026-07-30 at 10.44.55 PM.png>)
 ![alt text](<screenshots/Screenshot 2026-07-30 at 10.09.16 PM.png>)
 ![alt text](image.png)
 ![alt text](<screenshots/Screenshot 2026-07-30 at 9.40.10 PM.png>)
-```
 
 ---
 
