@@ -100,3 +100,4 @@
 /Users/nikhil/LMSystem/LMSystem.Web/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.InMemory.dll
 /Users/nikhil/LMSystem/LMSystem.Web/obj/Debug/net10.0/LMSystem.Web.csproj.AssemblyReference.cache
 /Users/nikhil/LMSystem/LMSystem.Web/obj/Debug/net10.0/LMSystem.1D522A66.Up2Date
+/Users/nikhil/LMSystem/LMSystem.Web/obj/Debug/net10.0/LMSystem.Web.sourcelink.json
